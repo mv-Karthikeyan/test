@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: #FFFFFF;
+  /* color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+  background-color: #141414;
+}
+
+/* colors */
+.text-pink {
+  color: #FF5A61;
+}
+
+.dark-blue {
+  color: #6C55FF;
+}
+
+.mid-blue {
+  color: #1891C8;
+}
+
+.green {
+  color: #A3C052;
+}
+
+.yellow {
+  color: #FFAB3A;
+}
+
+.light-blue {
+  color: #38BAFD;
+}
+
+.text-secoundary {
+  color: #D9D9D9 !important;
+
+}
+
+/* custom css */
+.join-community {
+  color: #FFFFFF;
+  background: rgb(26, 35, 42);
+  background: radial-gradient(circle, rgba(26, 35, 42, 1) 68%, rgba(87, 47, 226, 1) 100%);
+  border: #FFFFFF solid;
+  border-radius: 25px;
+}
+
+.join-community:hover {
+  background: rgb(108, 85, 255);
+}
+
+.join {
+  color: #FFFFFF;
+  background: rgb(108, 85, 255);
+  border-radius: 25px;
+}
+
+.join:hover {
+  color: #FFFFFF;
+  background: #1891C8;
+}
+
+.blog-byte-gradient {
+  color: rgb(255, 90, 97);
+  color: linear-gradient(90deg, rgba(255, 90, 97, 1) 68%, rgba(255, 171, 58, 1) 100%);
+}
+
+.headerGuest {
+  background-color: #141414;
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(125, 123, 125, 1);
+  -moz-box-shadow: 0px 1px 3px 0px rgba(125, 123, 125, 1);
+  box-shadow: 0px 1px 3px 0px rgba(125, 123, 125, 1);
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

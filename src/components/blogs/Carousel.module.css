@@ -1,0 +1,60 @@
+.carousel {
+    position: relative;
+    margin-top: 24px;
+    margin: 10px 20px;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .card {
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    margin: 0 auto;
+  }
+  
+  .cardMedia {
+    width: 40%; 
+    /* width: 490px;  */
+    height: auto;
+    flex: 0 0 auto;
+  }
+  
+  .cardContent {
+    width: 60%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+  }
+  
+  .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color:#000;
+    border: 1px solid #fff;
+    margin: 0 4px;
+    cursor: pointer;
+  }
+  
+  .dotActive {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+    background-color: #1891C8; 
+    border: 1px solid #1891C8; 
+  }
+  

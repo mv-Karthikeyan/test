@@ -1,0 +1,41 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+/.vs/Development-Groko/FileContentIndex/e101350a-e252-447a-b407-ece5c985cd76.vsidx
+/.vs/Development-Groko/FileContentIndex/f719b241-c4b2-40dc-94d3-9632e92212f6.vsidx
+/.vs/Development-Groko/FileContentIndex/f79c4001-c9ce-450b-8111-f5e1f8cb4f75.vsidx
+/.vs
+/.vscode/settings.json

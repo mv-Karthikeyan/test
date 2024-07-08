@@ -1,0 +1,74 @@
+/* components/Carousel.module.css */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    flex: 0 0 30%;
+    max-width: 30%;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    color: #fff;
+}
+
+.cardDescription {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.leftArrow,
+.rightArrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 10;
+    margin: 0 10px;
+}
+
+.dots {
+    display: flex;
+    gap: 6px;
+}
+
+.dot {
+    height: 20px;
+    width: 20px;
+    background-color: #2C2660;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dotActive {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #ffffff;
+}

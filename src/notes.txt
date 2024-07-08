@@ -1,0 +1,46 @@
+my-app/
+├── app/
+│   ├── about/
+│   │   └── page.tsx
+│   ├── blogs/
+│   │   ├── [id]/
+│   │   │   └── page.tsx         // Dynamic route for blog details
+│   │   └── page.tsx            // Main blogs page
+│   ├── contact/
+│   │   └── page.tsx
+│   ├── dashboard/
+│   │   └── page.tsx
+│   ├── login/
+│   │   └── page.tsx
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── blogs/
+│   │   ├── BlogList.tsx        // Blog list component
+│   │   └── BlogDetail.tsx      // Blog detail component
+│   ├── home/
+│   │   └── 
+│   ├── Header/
+│   │   └── Header.tsx
+│   ├── Footer/
+│   │   └── Footer.tsx
+│   ├── Sidebar/
+│   │   └── Sidebar.tsx
+│   └── Layout/
+│       └── Layout.tsx
+├── api/
+│   │   ├── blogs/
+│   │   ├── index.ts        // API endpoint for fetching all blogs
+│   │   └── [id].ts         // API endpoint for fetching a single blog by ID
+├── public/
+│   └── images/
+│       ├── logo.png
+│       ├── blog1.jpg          // Example blog image
+│       └── blog2.jpg          // Example blog image
+├── styles/
+│   ├── globals.css
+│   └── tailwind.css
+├── .env.local
+├── tailwind.config.js
+├── tsconfig.json
+└── next.config.js
