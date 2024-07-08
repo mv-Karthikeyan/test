@@ -2,20 +2,21 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      nodejs: 18.17.0
     commands:
-      - echo "Installing dependencies..."
+      - echo Installing Node.js 18.17.0...
+      - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+      - . ~/.nvm/nvm.sh
+      - nvm install 18.17.0
+      - nvm use 18.17.0
+      - nvm alias default 18.17.0
+      - node -v
+      - npm -v
+      - echo Installing dependencies...
       - npm install
-
   build:
     commands:
+      - echo Build started on `date`
       - npm run build
-
 artifacts:
   files:
-    - '.next/**/*'
-
-cache:
-  paths:
-    - node_modules/**/*
+    - '**/*'
