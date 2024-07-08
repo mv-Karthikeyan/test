@@ -9,16 +9,15 @@ phases:
       - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
       - export NVM_DIR="$HOME/.nvm"
       - . "$NVM_DIR/nvm.sh"  # Source nvm script to initialize nvm
-      - command -v nvm  # Verify if nvm is available
       - nvm install 18.17.0
       - nvm use 18.17.0
 
   build:
     commands:
       - echo "Build phase"
-      - npm install  # Example: Install dependencies
-      - npm run build  # Example: Run build script
-      - npm test  # Example: Run tests
+      - npm install  # Install dependencies
+      - npm run build  # Run build script
+      - npm test  # Run tests
 
 artifacts:
   files:
