@@ -2,23 +2,19 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      nodejs: 14
     commands:
-      - echo "Installing Node.js 18.17.0..."
-      - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-      - echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.bashrc
-      - echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.bashrc
-      - source ~/.bashrc
-      - nvm install 18.17.0
-      - nvm use 18.17.0
-      - node -v
-      - npm -v
       - echo "Installing dependencies..."
       - npm install
+
   build:
     commands:
-      - echo "Build started on $(date)"
+      - echo "Building Next.js project..."
       - npm run build
 
 artifacts:
   files:
     - '**/*'
+  discard-paths: no
+  base-directory: '.next'
