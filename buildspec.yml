@@ -6,10 +6,18 @@ phases:
       - echo "Installing Node.js 18.17.0..."
       - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
       - export NVM_DIR="$HOME/.nvm"
-      - . "$NVM_DIR/nvm.sh" # This loads nvm
+      - . "$NVM_DIR/nvm.sh"  # Source nvm script to initialize nvm
+      - command -v nvm  # Verify nvm is available
       - nvm install 18.17.0
       - nvm use 18.17.0
+
   build:
     commands:
       - echo "Build phase"
-      # Your build commands here
+      - npm install  # Example: Install dependencies
+      - npm run build  # Example: Run build script
+      - npm test  # Example: Run tests
+
+artifacts:
+  files:
+    - '**/*'
