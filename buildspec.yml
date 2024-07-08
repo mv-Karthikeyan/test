@@ -8,13 +8,16 @@ phases:
       - echo "Installing Node.js 18.17.0..."
       - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
       - export NVM_DIR="$HOME/.nvm"
-      - . "$NVM_DIR/nvm.sh"  # Source nvm script to initialize nvm
-      - nvm install 18.17.0
+      - source "$NVM_DIR/nvm.sh"  # Source nvm script to initialize nvm
+      - command -v nvm  # Verify if nvm is available
+      - nvm install 18.17.0 || true  # Install Node.js using nvm (ignore errors temporarily)
       - nvm use 18.17.0
 
   build:
     commands:
       - echo "Build phase"
+      - source "$NVM_DIR/nvm.sh"  # Source nvm script again in the build phase
+      - node -v  # Verify Node.js version
       - npm install  # Install dependencies
       - npm run build  # Run build script
       - npm test  # Run tests
