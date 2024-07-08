@@ -6,7 +6,10 @@ phases:
       - echo "Installing Node.js 18.17.0..."
       - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
       - export NVM_DIR="$HOME/.nvm"
-      - [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+      - [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+      - echo "NVM_DIR is set to $NVM_DIR"
+      - ls -la $NVM_DIR
+      - source $NVM_DIR/nvm.sh
       - nvm install 18.17.0
       - nvm use 18.17.0
       - node -v
@@ -17,6 +20,7 @@ phases:
     commands:
       - echo "Build started on $(date)"
       - npm run build
+
 artifacts:
   files:
     - '**/*'
