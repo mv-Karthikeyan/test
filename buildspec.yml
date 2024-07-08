@@ -3,23 +3,20 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      dotnet: 6.0 # or the version of .NET you're using
+      nodejs: 16
     commands:
       - echo "Installing dependencies..."
-      - cd src # Navigate to the project directory
-      - dotnet restore
+      - npm install
+
   build:
     commands:
-      - echo "Building the project..."
-      - cd src # Navigate to the project directory
-      - dotnet build --configuration Release
-  post_build:
-    commands:
-      - echo "Running tests..."
-      - cd src # Navigate to the project directory
-      - dotnet test --configuration Release
+      - npm run build
+
 artifacts:
   files:
-    - '**/*'
-  discard-paths: yes
-  base-directory: 'src/bin/Release/net6.0'
+    - '.next/**/*'
+
+cache:
+  paths:
+    - node_modules/**/*
+
