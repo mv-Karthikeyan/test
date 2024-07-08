@@ -1,7 +1,8 @@
 #!/bin/bash
-# Stop any running instances of the application
-pkill -f dotnet
 
-# Start the application
-cd /var/www/myapp
-nohup dotnet myapp.dll > /dev/null 2>&1 &
+# Example script to start the server or application
+echo "Starting server..."
+
+# Replace with actual command to start your server
+# Example: starting a Node.js application
+npm start
